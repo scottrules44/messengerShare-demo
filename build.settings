@@ -1,0 +1,22 @@
+settings =
+{
+	iphone =
+	{
+		plist =
+        {
+		    MinimumOSVersion = "8.0",
+		    UIApplicationExitsOnSuspend = false,
+
+		    LSApplicationQueriesSchemes =
+		    {
+			"fb-messenger",
+		    },
+        },
+	},
+    plugins =
+    {
+    	["plugin.messengerShare"] = {
+    		publisherId = "tech.scotth",
+    	}
+    },
+}
