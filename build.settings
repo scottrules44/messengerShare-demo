@@ -10,8 +10,16 @@ settings =
 		    LSApplicationQueriesSchemes =
 		    {
 			"fb-messenger",
+            "fb-messenger-api",
 		    },
         },
+	},
+	android =
+    {
+        usesPermissions =
+        	{
+        		"android.permission.INTERNET",
+        	},
 	},
     plugins =
     {
