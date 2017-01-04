@@ -1,30 +1,40 @@
 settings =
 {
-	iphone =
-	{
-		plist =
-        {
-		    MinimumOSVersion = "8.0",
-		    UIApplicationExitsOnSuspend = false,
-
-		    LSApplicationQueriesSchemes =
-		    {
-			"fb-messenger",
-            "fb-messenger-api",
-		    },
+    iphone =
+    {
+        plist =
+            {
+            MinimumOSVersion = "8.0",
+            UIApplicationExitsOnSuspend = false,
+            FacebookAppID = "XXXXXXXXXX",  -- Replace XXXXXXXXXX with your Facebook App ID
+            CFBundleURLTypes =
+            {
+            { CFBundleURLSchemes = { "fbXXXXXXXXXX", } }  -- Replace XXXXXXXXXX with your Facebook App ID
+            },
+            -- Whitelist Facebook apps
+            LSApplicationQueriesSchemes =
+            {
+                "fb",
+                "fb-messenger",
+                "fbapi",
+                "fbauth2",
+                "fb-messenger-api",
+                "fbshareextension"
+            },
         },
-	},
-	android =
+    },
+    android =
     {
         usesPermissions =
-        	{
-        		"android.permission.INTERNET",
-        	},
-	},
+        {
+            "android.permission.INTERNET"
+        },
+        facebookAppId = "XXXXXXXXXX",  -- Replace XXXXXXXXXX with your Facebook App ID
+    },
     plugins =
     {
-    	["plugin.messengerShare"] = {
-    		publisherId = "tech.scotth",
-    	}
+        ["plugin.messengerShare"] = {
+            publisherId = "tech.scotth",
+        }
     },
 }
