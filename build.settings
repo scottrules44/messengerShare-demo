@@ -29,12 +29,23 @@ settings =
         {
             "android.permission.INTERNET"
         },
+        applicationChildElements =
+        {
+            [[<provider android:authorities="com.facebook.app.FacebookContentProviderXXXXXXXXXX"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/> ]],
+        },-- Replace XXXXXXXXXX with your Facebook App ID
+
         facebookAppId = "XXXXXXXXXX",  -- Replace XXXXXXXXXX with your Facebook App ID
     },
     plugins =
     {
         ["plugin.messengerShare"] = {
             publisherId = "tech.scotth",
-        }
+        },
+        ["plugin.facebook.v4"] =
+        {
+            publisherId = "com.coronalabs"
+        },
     },
 }
